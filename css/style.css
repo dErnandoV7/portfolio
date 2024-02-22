@@ -7,12 +7,32 @@
   margin: 0;
   box-sizing: border-box;
   font-family: helvetica, Arial, sans-serif;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: #656565;
+}
+
+.color-theme {
+  color: var(--color-primary);
 }
 
 body,
 main {
   background: #1d1c1d;
   padding: 0.5rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card {
@@ -22,10 +42,11 @@ main {
   border: 1px solid #373637;
   border-radius: 30px;
   padding: 2.5rem 2rem;
-  width: 100%;
-  max-width: 450px;
+  max-height: 95vh;
+  width: 95%;
+  max-width: 400px;
   color: #fefefe;
-  min-height: 95vh;
+  margin-right: 50px;
 }
 
 .card-title {
@@ -34,7 +55,7 @@ main {
   width: 100%;
 }
 
-.card-title h1 {
+.card-title h2 {
   font-size: 35px;
   font-weight: normal;
   text-transform: capitalize;
@@ -76,7 +97,6 @@ main {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  list-style: none;
   margin-bottom: 20px;
 }
 
@@ -113,18 +133,221 @@ main {
   font-size: 20px;
   background: var(--color-primary);
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .hire-me:hover {
-    box-shadow: 0px 0px 21px 3px var(--color-primary);
+  box-shadow: 0px 0px 21px 3px var(--color-primary);
 }
 
+.container {
+  flex: 1;
+  height: 95vh;
+  max-height: 95vh;
+  overflow-y: scroll;
+  color: #fff;
+}
+
+.container > div {
+  min-height: 100vh;
+}
+
+.icon-section {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #656565;
+  width: min-content;
+  font-size: 14px;
+  color: #656565;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.icon-section:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+#introduction {
+  display: flex;
+  flex-direction: column;
+}
+
+#introduction h1 {
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 60px;
+  line-height: 70px;
+  margin-bottom: 40px;
+}
+
+#introduction .description {
+  color: #656565;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  max-width: 500px;
+}
+
+#specialties {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#specialties .title {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+#specialties .education-or-experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-left: 1px solid #6565653a;
+  padding: 30px 50px;
+  padding-top: 0;
+  position: relative;
+  min-height: 60px;
+}
+
+#specialties .date {
+  display: inline-block;
+  color: #656565;
+  margin-bottom: 15px;
+}
+
+#specialties .education-or-experience > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#specialties .education-or-experience > div span {
+  display: inline-block;
+  color: #656565;
+}
+
+#specialties .circle {
+  position: absolute;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #656565;
+  z-index: 1;
+  top: 0;
+  left: -5px;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0.3;
+  height: 95vh;
+  max-height: 95vh;
+}
+
+.sidebar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #656565;
+  color: #656565;
+  padding: 20px 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.sidebar ul:hover {
+  border-color: #fff;
+}
+
+.sidebar ul li {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    position: relative;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .card {
+    margin-right: 0;
+    max-width: 90%;
+  }
+
+  .card img {
+    width: 200px;
+  }
+
+  .container {
+    max-height: none;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: min-content;
+    background: #1d1c1d79;
+  }
+
+  .sidebar ul {
+    border: none;
+    flex-direction: row;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .sidebar ul li i {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-title {
+   flex-direction: column;
+   gap: 6px;
+  }
+
+  .card-title h2 {
+    font-size: 25px;
+  }
+
+  .card-title p {
+    text-align: left;
+    font-size: 12px;
+    color: #656565;
+  }
+}
+
+
 @media (max-width: 350px) {
-    main {
-        padding: 5px;
-    }
-    .card {
-        padding: 1.5rem .5rem;
-    }
+  .card {
+    padding: 1.5rem 0.5rem;
+  }
 }
