@@ -1,0 +1,130 @@
+:root {
+  --color-primary: #0000ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: helvetica, Arial, sans-serif;
+}
+
+body,
+main {
+  background: #1d1c1d;
+  padding: 0.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #373637;
+  border-radius: 30px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 450px;
+  color: #fefefe;
+  min-height: 95vh;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-title h1 {
+  font-size: 35px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.card-title p {
+  font-size: 16px;
+  text-align: right;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.card img {
+  margin: 30px 0px;
+  width: 80%;
+  border-radius: 30px;
+  filter: drop-shadow(2px 2px 1px #fff);
+}
+
+.card-location h3 {
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.card-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-contact ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.card-contact ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #656565;
+  cursor: pointer;
+  color: #656565;
+  transition: 0.4s;
+}
+
+.card-contact ul li:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.card-contact ul li i {
+  font-size: 23px;
+}
+
+.hire-me {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 20px;
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.hire-me:hover {
+    box-shadow: 0px 0px 21px 3px var(--color-primary);
+}
+
+@media (max-width: 350px) {
+    main {
+        padding: 5px;
+    }
+    .card {
+        padding: 1.5rem .5rem;
+    }
+}
