@@ -1,5 +1,5 @@
 const skills = [
-  { name: "js", color: "#efd81d", width: "98%" },
+  { name: "js", color: "#efd81d", width: "95%" },
   { name: "react", color: "#5ed3f3", width: "80%" },
   { name: "sass", color: "#c76494", width: "90%" },
   { name: "html", color: "#dd4b25", width: "95%" },
