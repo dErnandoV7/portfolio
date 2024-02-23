@@ -39,10 +39,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   border: 1px solid #373637;
   border-radius: 30px;
   padding: 2.5rem 2rem;
-  max-height: 95vh;
+  height: 95vh;
   width: 95%;
   max-width: 400px;
   color: #fefefe;
@@ -195,6 +196,7 @@ main {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 #specialties .title {
@@ -211,7 +213,7 @@ main {
   padding: 30px 50px;
   padding-top: 0;
   position: relative;
-  min-height: 60px;
+  min-height: 80px;
 }
 
 #specialties .date {
@@ -229,6 +231,7 @@ main {
 #specialties .education-or-experience > div span {
   display: inline-block;
   color: #656565;
+  font-size: 14px;
 }
 
 #specialties .circle {
@@ -241,6 +244,79 @@ main {
   z-index: 1;
   top: 0;
   left: -5px;
+}
+
+#skills h2 {
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.skills-container i {
+  transition: 0.4s;
+}
+
+.skills-container i:hover {
+  transform: scale(1.1);
+  color: var(--color-primary);
+}
+
+.skills-container h2 {
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 30px;
+  padding-left: 8px;
+  border-left: 1px solid var(--color-primary);
+}
+
+.skills-container h2 span {
+  color: var(--color-primary);
+  font-size: 35px;
+}
+
+.skill {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 4px 8px;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.bar-skill {
+  border: 1px solid #fff;
+  height: 10px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.bar-percentage {
+  height: 100%;
+  width: 0%;
+  transition: 1.5s;
+  box-shadow: 8px 0px 5px var(--color-primary);
+}
+
+.logo-skill {
+  width: 60px;
+}
+
+.logo-skill i {
+  font-size: 45px;
+  color: #fff;
 }
 
 .sidebar {
@@ -297,6 +373,7 @@ main {
   .card {
     margin-right: 0;
     max-width: 90%;
+    height: 85vh;
   }
 
   .card img {
@@ -330,8 +407,8 @@ main {
 
 @media (max-width: 500px) {
   .card-title {
-   flex-direction: column;
-   gap: 6px;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .card-title h2 {
@@ -344,7 +421,6 @@ main {
     color: #656565;
   }
 }
-
 
 @media (max-width: 350px) {
   .card {
