@@ -151,7 +151,7 @@ main {
   color: #fff;
 }
 
-.container > div {
+.container>div {
   min-height: 100vh;
 }
 
@@ -225,13 +225,13 @@ main {
   margin-bottom: 15px;
 }
 
-#specialties .education-or-experience > div {
+#specialties .education-or-experience>div {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-#specialties .education-or-experience > div span {
+#specialties .education-or-experience>div span {
   display: inline-block;
   color: #656565;
   font-size: 14px;
@@ -329,7 +329,7 @@ main {
   padding: 10px;
 }
 
-#projects > h2 {
+#projects>h2 {
   font-size: 26px;
 }
 
@@ -344,6 +344,7 @@ main {
   margin-bottom: 30px;
   border-bottom: 1px solid #656565;
   width: 100%;
+  margin: auto;
 }
 
 .name-project {
@@ -476,10 +477,14 @@ main {
     padding-top: 40px;
   }
 
+  #introduction h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
   .card {
     margin-right: 0;
-    max-width: 90%;
-    height: 85vh;
+    max-width: 100%;
   }
 
   .card img {
@@ -529,15 +534,13 @@ main {
   #pj-3 {
     background-size: 90%;
   }
-  /* #pj-4 {
-    background-size: cover;
-  } */
 }
 
 @media (max-width: 350px) {
   #introduction {
     padding: 0px 0.3rem;
   }
+
   .card {
     padding: 1.5rem 0.5rem;
   }
